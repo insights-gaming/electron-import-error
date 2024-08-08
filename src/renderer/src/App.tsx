@@ -1,8 +1,11 @@
 import Versions from './components/Versions'
 import electronLogo from './assets/electron.svg'
+import { kGameIds } from '@overwolf/ow-electron-packages-types'
 
 function App(): JSX.Element {
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
+
+  console.log(kGameIds.Osu)
 
   return (
     <>
